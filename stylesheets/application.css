@@ -1,4 +1,14 @@
-body { font-family: Verdana, sans-serif; font-size: 12px; color:#484848; margin: 0; padding: 0; min-width: 900px; }
+html {
+	background: #333;
+}
+body {
+	font-family: Verdana, sans-serif;
+	font-size: 12px;
+	color: #333;
+	margin: 0;
+	padding: 0;
+	min-width: 900px;
+}
 
 h1, h2, h3, h4 { font-family: "Trebuchet MS", Verdana, sans-serif;}
 h1 {margin:0; padding:0; font-size: 24px;}
@@ -6,36 +16,93 @@ h2, .wiki h1 {font-size: 20px;padding: 2px 10px 1px 0px;margin: 0 0 10px 0; bord
 h3, .wiki h2 {font-size: 16px;padding: 2px 10px 1px 0px;margin: 0 0 10px 0; border-bottom: 1px solid #bbbbbb; color: #444;}
 h4, .wiki h3 {font-size: 13px;padding: 2px 10px 1px 0px;margin-bottom: 5px; border-bottom: 1px dotted #bbbbbb; color: #444;}
 
-/***** Layout *****/
-#wrapper {background: white;}
-
-#top-menu {background: #2C4056; color: #fff; height:1.8em; font-size: 0.8em; padding: 2px 2px 0px 6px;}
-#top-menu ul {margin: 0;  padding: 0;}
-#top-menu li {
-  float:left;
-  list-style-type:none;
-  margin: 0px 0px 0px 0px;
-  padding: 0px 0px 0px 0px;
-  white-space:nowrap;
+input:focus {
+    outline: none;
 }
-#top-menu a {color: #fff; margin-right: 8px; font-weight: bold;}
-#top-menu #loggedas { float: right; margin-right: 0.5em; color: #fff; }
 
-#account {float:right;}
+/* ------------------------------------- TOP MENU */
+#top-menu {
+    background: #000;
+    color: #fff;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 0 10px 0;
+}
+    #top-menu ul,
+    #top-menu div {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+    }
+    #top-menu li {
+        display: inline-block;
+        white-space: nowrap;
+    }
+#quick-search {
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 30px;
+}
+    #quick-search form {
+        display: inline-block;
+        vertical-align: middle;
+        width: 150px;
+        position: relative;
+        font-size: 0;
+        margin: 0 20px 0 0;
+        padding: 0;
+    }
+        #quick-search form a {
+            display: none;
+        }
+        #quick-search form input {
+            width: 150px;
+            position: absolute;
+            left: 0;
+            top: 5px;
 
-#header {height:5.3em;margin:0;background-color:#507AAA;color:#f8f8f8; padding: 4px 8px 0px 6px; position:relative;}
+            height: 20px;
+            line-height: 20px;
+            padding: 0 10px;
+            border: none;
+
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+        }
+    #quick-search select {
+        display: inline-block;
+        vertical-align: middle;
+        height: 20px;
+    }
+
+
+/* ------------------------------------- HEADER */
+#header {
+	margin: 0;
+	color: #f8f8f8;
+	padding: 4px 8px 0px 6px;
+}
+    #header h1 {
+        display: none;
+    }
 #header a {color:#f8f8f8;}
 #header h1 a.ancestor { font-size: 80%; }
-#quick-search {float:right;}
 
-#main-menu {position: absolute;  bottom: 0px;  left:6px; margin-right: -500px;}
-#main-menu ul {margin: 0;  padding: 0;}
+/* ------------------------------------- MAIN MENU */
+#main-menu {
+    min-width: 800px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+#main-menu ul {
+    margin: 0;
+    padding: 0;
+}
 #main-menu li {
-  float:left;
-  list-style-type:none;
-  margin: 0px 2px 0px 0px;
-  padding: 0px 0px 0px 0px;
-  white-space:nowrap;
+    display: inline-block;
+    white-space: nowrap;
 }
 #main-menu li a {
   display: block;
@@ -66,7 +133,16 @@ h4, .wiki h3 {font-size: 13px;padding: 2px 10px 1px 0px;margin-bottom: 5px; bord
 #admin-menu a.info { background-image: url(../images/help.png); }
 #admin-menu a.server_authentication { background-image: url(../images/server_key.png); }
 
-#main {background-color:#EEEEEE;}
+
+/* ------------------------------------- MAIN */
+#main {
+	background: #fff;
+	min-width: 800px;
+	max-width: 90%;
+
+	margin: 0 auto;
+	
+}
 
 #sidebar{ float: right; width: 22%; position: relative; z-index: 9; padding: 0; margin: 0;}
 * html #sidebar{ width: 22%; }
