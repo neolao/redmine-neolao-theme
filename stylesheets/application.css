@@ -27,16 +27,108 @@ input:focus {
     height: 30px;
     line-height: 30px;
     margin: 0 0 10px 0;
+    padding: 0 10px;
+
+    background: #3f3f3f;
+    background: -moz-linear-gradient(top, #3f3f3f 0%, #0a0a0a 76%, #1e1e1e 95%, #0a0a0a 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3f3f3f), color-stop(76%,#0a0a0a), color-stop(95%,#1e1e1e), color-stop(100%,#0a0a0a));
+    background: -webkit-linear-gradient(top, #3f3f3f 0%,#0a0a0a 76%,#1e1e1e 95%,#0a0a0a 100%);
+    background: -o-linear-gradient(top, #3f3f3f 0%,#0a0a0a 76%,#1e1e1e 95%,#0a0a0a 100%);
+    background: -ms-linear-gradient(top, #3f3f3f 0%,#0a0a0a 76%,#1e1e1e 95%,#0a0a0a 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f3f3f', endColorstr='#0a0a0a',GradientType=0 );
+    background: linear-gradient(top, #3f3f3f 0%,#0a0a0a 76%,#1e1e1e 95%,#0a0a0a 100%);
+
 }
     #top-menu ul,
-    #top-menu div {
+    #top-menu div,
+    #top-menu li,
+    #top-menu a {
         display: inline-block;
         margin: 0;
         padding: 0;
+        vertical-align: top;
     }
-    #top-menu li {
-        display: inline-block;
-        white-space: nowrap;
+    #account {
+        width: 40px;
+        height: 30px;
+        position: relative;
+    }
+        #account ul,
+        #account li {
+            position: absolute;
+            height: 30px;
+            top: 0;
+            left: 0;
+        }
+            #top-menu .my-account {
+                width: 20px;
+                height: 30px;
+                background: url(../images/icons/user_gray.png) no-repeat center center;
+                text-indent: -1000px;
+                position: absolute;
+                left: 20px;
+            }
+            #top-menu .my-account:hover {
+                background-image: url(../images/icons/user.png);
+            }
+            #top-menu .logout {
+                width: 20px;
+                height: 30px;
+                background: url(../images/icons/disconnect_gray.png) no-repeat center center;
+                text-indent: -1000px;
+                position: absolute;
+                left: 0;
+            }
+            #top-menu .logout:hover {
+                background-image: url(../images/icons/disconnect.png);
+            }
+    #loggedas {
+        display: none !important;
+    }
+    #top-menu .home {
+        width: 20px;
+        height: 30px;
+        background: url(../images/icons/house_gray.png) no-repeat center center;
+        text-indent: -1000px;
+    }
+    #top-menu .home:hover {
+        background-image: url(../images/icons/house.png);
+    }
+    #top-menu .my-page {
+        width: 20px;
+        height: 30px;
+        background: url(../images/icons/application_view_columns_gray.png) no-repeat center center;
+        text-indent: -1000px;
+    }
+    #top-menu .my-page:hover {
+        background-image: url(../images/icons/application_view_columns.png);
+    }
+    #top-menu .projects {
+        width: 20px;
+        height: 30px;
+        background: url(../images/icons/report_gray.png) no-repeat center center;
+        text-indent: -1000px;
+    }
+    #top-menu .projects:hover {
+        background-image: url(../images/icons/report.png);
+    }
+    #top-menu .administration {
+        width: 20px;
+        height: 30px;
+        background: url(../images/icons/cog_gray.png) no-repeat center center;
+        text-indent: -1000px;
+    }
+    #top-menu .administration:hover {
+        background-image: url(../images/icons/cog.png);
+    }
+    #top-menu .help {
+        width: 20px;
+        height: 30px;
+        background: url(../images/icons/help_gray.png) no-repeat center center;
+        text-indent: -1000px;
+    }
+    #top-menu .help:hover {
+        background-image: url(../images/icons/help.png);
     }
 #quick-search {
     position: absolute;
