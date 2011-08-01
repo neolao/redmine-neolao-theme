@@ -134,12 +134,14 @@ input:focus {
     position: absolute;
     top: 0;
     right: 0;
+    height: 30px
     line-height: 30px;
 }
     #quick-search form {
         display: inline-block;
         vertical-align: middle;
         width: 150px;
+        height: 30px;
         position: relative;
         font-size: 0;
         margin: 0 20px 0 0;
@@ -149,24 +151,31 @@ input:focus {
             display: none;
         }
         #quick-search form input {
-            width: 150px;
+            width: 130px;
             position: absolute;
             left: 0;
-            top: 5px;
+            top: 4px;
 
             height: 20px;
             line-height: 20px;
-            padding: 0 10px;
+            padding: 0 10px 0 25px;
             border: none;
+
+            background: #eee url(../images/icons/magnifier_gray.png) no-repeat 5px center;
+            color: #666;
 
             -webkit-border-radius: 10px;
             -moz-border-radius: 10px;
             border-radius: 10px;
         }
+        #quick-search form input:focus {
+            background: #fff url(../images/icons/magnifier.png) no-repeat 5px center;
+            color: #000;
+        }
     #quick-search select {
         display: inline-block;
         vertical-align: middle;
-        height: 20px;
+        margin: 0 20px 0 10px;
     }
 
 
