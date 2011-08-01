@@ -193,8 +193,7 @@ input:focus {
 /* ------------------------------------- HEADER */
 #header {
 	margin: 0;
-	color: #f8f8f8;
-	padding: 4px 8px 0px 6px;
+	padding: 0;
 }
     #header h1 {
         display: none;
@@ -218,14 +217,30 @@ input:focus {
 }
 #main-menu li a {
   display: block;
-  color: #fff;
+  color: #ccc;
   text-decoration: none;
-  font-weight: bold;
+  font-size: 16px;
   margin: 0;
   padding: 4px 10px 4px 10px;
 }
-#main-menu li a:hover {background:#759FCF; color:#fff;}
-#main-menu li a.selected, #main-menu li a.selected:hover {background:#fff; color:#555;}
+#main-menu li a:hover {
+    color: #fff;
+}
+#main-menu li a.selected, #main-menu li a.selected:hover {
+    background: #fff;
+    color: #000;
+    font-weight: bold;
+
+    padding-bottom: 20px;
+    margin-bottom: -10px;
+
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
+    -moz-border-radius-topleft: 8px;
+    -moz-border-radius-topright: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
 
 #admin-menu ul {margin: 0;  padding: 0;}
 #admin-menu li {margin: 0;  padding: 0 0 12px 0; list-style-type:none;}
@@ -253,7 +268,14 @@ input:focus {
 	max-width: 90%;
 
 	margin: 0 auto;
-	
+    padding: 0;
+
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+#content {
+    padding: 20px;
 }
 
 #sidebar{ float: right; width: 22%; position: relative; z-index: 9; padding: 0; margin: 0;}
@@ -262,11 +284,6 @@ input:focus {
 #sidebar hr{ width: 100%; margin: 0 auto; height: 1px; background: #ccc; border: 0; }
 * html #sidebar hr{ width: 95%; position: relative; left: -6px; color: #ccc; }
 #sidebar .contextual { margin-right: 1em; }
-
-#content { width: 75%; background-color: #fff; margin: 0px; border-right: 1px solid #ddd; padding: 6px 10px 10px 10px; z-index: 10; }
-* html #content{ width: 75%; padding-left: 0; margin-top: 0px; padding: 6px 10px 10px 10px;}
-html>body #content { min-height: 600px; } 
-* html body #content { height: 600px; } /* IE */
 
 #main.nosidebar #sidebar{ display: none; }
 #main.nosidebar #content{ width: auto; border-right: 0; }
