@@ -10,6 +10,31 @@ body {
 	min-width: 900px;
 }
 
+
+/* ------------------------------------- GENERAL */
+.clear:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+input[type=text],
+input[type=password] {
+    border: solid 1px #ccc;
+
+    line-height: 2em;
+    padding: 0 1em;
+
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+input[type=text]:focus,
+input[type=password]:focus {
+    color: #000;
+    border-color: #000;
+}
 input:focus {
     outline: none;
 }
@@ -23,6 +48,13 @@ input:focus {
 }
     #footer a {
         color: inherit;
+    }
+    #footer .bgr:after {
+        content: "Designed by neolao";
+        display: inline;
+        padding-left: 5px;
+        margin-left: 5px;
+        border-left: solid 1px #999;
     }
 
 /* ------------------------------------- TOP MENU */
@@ -58,6 +90,9 @@ input:focus {
         height: 30px;
         position: relative;
     }
+    .controller-account.action-login #account {
+        width: 20px;
+    }
         #account ul,
         #account li {
             position: absolute;
@@ -86,6 +121,17 @@ input:focus {
             }
             #top-menu .logout:hover {
                 background-image: url(../images/icons/disconnect.png);
+            }
+            #top-menu .login {
+                width: 20px;
+                height: 30px;
+                background: url(../images/icons/connect_gray.png) no-repeat center center;
+                text-indent: -1000px;
+                position: absolute;
+                left: 0;
+            }
+            #top-menu .login:hover {
+                background-image: url(../images/icons/connect.png);
             }
     #loggedas {
         display: none !important;
@@ -369,6 +415,7 @@ input:focus {
     top: -33px;
     left: -1px;
     background-image: url(../images/icons/dropdown.png);
+    cursor: pointer;
 }
     .controller-issues.action-index #sidebar:hover h3:first-child {
         margin-top: 0;
@@ -379,7 +426,7 @@ input:focus {
     margin-left: 32px;
     height: 30pxpx;
     line-height: 30px;
-    padding: 0 10px;
+    padding: 0 15px;
     border: solid 1px #999;
     border-left: solid 1px #ccc;
 
@@ -404,20 +451,22 @@ input:focus {
 
 
 
+/* ------------------------------------- MAIN - LOGIN */
+#login-form table {
+    margin-top: 5em;
+    padding: 1em;
+    margin: 0 auto;
+}
+#login-form #username, #login-form #password {
+    width: 300px;
+}
 
 
 
 
-
-
-#login-form table {margin-top:5em; padding:1em; margin-left: auto; margin-right: auto; border: 2px solid #FDBF3B; background-color:#FFEBC1; }
-#login-form table td {padding: 6px;}
-#login-form label {font-weight: bold;}
-#login-form input#username, #login-form input#password { width: 300px; }
 
 input#openid_url { background: url(../images/openid-bg.gif) no-repeat; background-color: #fff; background-position: 0 50%; padding-left: 18px; }
 
-.clear:after{ content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
 /***** Links *****/
 a, a:link, a:visited{ color: #2A5685; text-decoration: none; }
