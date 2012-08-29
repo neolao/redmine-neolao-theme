@@ -63,7 +63,7 @@ input:focus {
     color: #fff;
     height: 30px;
     line-height: 30px;
-    margin: 0 0 10px 0;
+    margin: 0 0 20px 0;
     padding: 0 10px;
 
     background: #3f3f3f;
@@ -74,6 +74,9 @@ input:focus {
     background: -ms-linear-gradient(top, #3f3f3f 0%,#0a0a0a 76%,#1e1e1e 95%,#0a0a0a 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f3f3f', endColorstr='#0a0a0a',GradientType=0 );
     background: linear-gradient(top, #3f3f3f 0%,#0a0a0a 76%,#1e1e1e 95%,#0a0a0a 100%);
+
+    -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.7);
 
 }
     #top-menu ul,
@@ -430,7 +433,7 @@ input:focus {
     border: solid 1px #999;
     border-left: solid 1px #ccc;
 
-    color: #0072d9;
+    color: #000;
 
     background: #f2f6f8;
     background: -moz-linear-gradient(top, #f2f6f8 0%, #d8e1e7 50%, #b5c6d0 51%, #e0eff9 100%);
